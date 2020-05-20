@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:portofolio/Section/skills.dart';
 
-import 'LandingPage/landing.dart';
+import 'Section/landing.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,20 +41,8 @@ class MainPage extends StatelessWidget {
                   children: [LandingPage()],
                 )),
           ),
-
-          // Container(
-          //     decoration: new BoxDecoration(
-          //         gradient: LinearGradient(
-          //       begin: Alignment.topLeft,
-          //       end: Alignment.bottomRight,
-          //       colors: [
-          //         Color.fromRGBO(36, 37, 42, 1.0),
-          //         Color.fromRGBO(52, 73, 94, 1.0)
-          //       ],
-          //     )),
-          //     child: Column(
-          //       children: [Navbar()],
-          //     )),
+          SizedBox(height: 26.0,),
+          SkillsSection(),
         ],
       ),
     );
