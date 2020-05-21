@@ -1,62 +1,51 @@
 import 'package:flutter/material.dart';
 
+
+// class MobileSkills extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Text("Skills",
+//             style: TextStyle(
+//                 fontWeight: FontWeight.bold,
+//                 fontSize: 40.0,
+//                 color: Colors.blueGrey[900])),
+//         SizedBox(height: 28.0),
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             skillCard("assets/img/flutter.png", "Flutter"),
+//             skillCard("assets/img/laravel.png", "Laravel"),
+//             skillCard("assets/img/html5.png", "HTML5"),
+//           ],
+//         ),
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             skillCard("assets/img/css3.png", "CSS3"),
+//             skillCard("assets/img/kotlin.png", "Kotlin"),
+//           ],
+//         )
+//       ],
+//     );
+//   }
+// }
+
 class SkillsSection extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth > 905) {
-        return DesktopSkills();
-      } else if (constraints.maxWidth < 905) {
-        return MobileSkills();
-      }
-    });
-  }
-}
-
-class MobileSkills extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text("Skills",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 40.0,
-                color: Colors.indigoAccent[400])),
-        SizedBox(height: 28.0),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            skillCard("assets/img/flutter.png", "Flutter"),
-            skillCard("assets/img/laravel.png", "Laravel"),
-            skillCard("assets/img/html5.png", "HTML5"),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            skillCard("assets/img/css3.png", "CSS3"),
-            skillCard("assets/img/kotlin.png", "Kotlin"),
-          ],
-        )
-      ],
-    );
-  }
-}
-
-class DesktopSkills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Text("Skills",
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 40.0,
-              color: Colors.indigoAccent[400])),
+              fontSize: 32.0,
+              color: Colors.blueGrey[900])),
       SizedBox(height: 28.0),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      Wrap(
+        direction: Axis.horizontal,
+        alignment: WrapAlignment.center,
         children: [
           skillCard("assets/img/flutter.png", "Flutter"),
           skillCard("assets/img/laravel.png", "Laravel"),

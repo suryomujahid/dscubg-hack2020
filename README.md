@@ -1,6 +1,6 @@
 # portofolio
 
-A new Flutter project.
+project for DSC UBG lebaran-ya-hackaton2020
 
 ## Getting Started
 

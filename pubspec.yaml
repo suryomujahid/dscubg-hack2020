@@ -55,6 +55,17 @@ flutter:
     - assets/img/html5.png
     - assets/img/kotlin.png
     - assets/img/laravel.png
+    - assets/img/iBadminton.png
+    - assets/img/iGaming.png
+    - assets/img/iSleeping.png
+    - assets/img/iPainting.png
+    - assets/img/prAsesmenCovid.png
+    - assets/img/prAttitudeRecord.png
+    - assets/img/prAuthUwu.png
+    - assets/img/prMieIndo.png
+    - assets/img/prQuiztoria.png
+    - assets/img/sertAndroid.png
+    - assets/img/sertWeb.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
