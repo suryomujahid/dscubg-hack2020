@@ -31,7 +31,7 @@ class MainPage extends StatelessWidget {
           ClipPath(
             clipper: WaveClipperTwo(),
             child: Container(
-                height: 580.0,
+                padding: EdgeInsets.symmetric(vertical: 100.0),
                 decoration: new BoxDecoration(
                     gradient: LinearGradient(
                   begin: Alignment.topLeft,

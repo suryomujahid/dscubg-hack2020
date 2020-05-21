@@ -23,7 +23,6 @@ class DesktopLanding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 100.0, bottom: 40.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -44,14 +43,6 @@ class DesktopLanding extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            // ButttonWithIcon(
-            //   buttonColor: Colors.green,
-            //   icon: Icons.mail_outline,
-            //   title: "Send me a letter!",
-            //   onPressed: () {
-            //     html.window.open("mailto:suryomujahid@gmail.com", "Pk");
-            //   },
-            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -96,8 +87,8 @@ class MobileLanding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 100.0, bottom: 40.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -106,7 +97,7 @@ class MobileLanding extends StatelessWidget {
                     TextStyle(fontSize: 34.0, color: Colors.indigoAccent[400])),
             Text("I am Suryo Mujahid",
                 style: TextStyle(
-                    fontSize: 46.0,
+                    fontSize: 42.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.indigoAccent)),
             Text(
@@ -142,7 +133,7 @@ class MobileLanding extends StatelessWidget {
             borderRadius: BorderRadius.circular(200.0),
             child: Image.asset(
               'assets/img/me.jpg',
-              width: 200.0,
+              width: 150.0,
               fit: BoxFit.fill,
             ),
           ),
