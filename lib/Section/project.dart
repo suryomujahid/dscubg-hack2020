@@ -70,7 +70,10 @@ Card projectCard(String title, String desc, String imgLoc, String linkGithub) {
   return Card(
     elevation: 5.0,
     color: Colors.grey[200],
-    child: Container(
+    child: LayoutBuilder(
+      builder: (context, constraints){
+        if (constraints.maxWidth > 905) {
+          return Container(
         width: 350,
         height: 150.0,
         child: Row(
@@ -118,6 +121,62 @@ Card projectCard(String title, String desc, String imgLoc, String linkGithub) {
                   ]),
             ),
           ],
-        )),
+        ),
+        );
+        } else {
+          return Container(
+            width: 225,
+        height: 350.0,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage(imgLoc),
+              width: 225.0,
+              height: 200.0,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: EdgeInsets.all(6.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.grey[500],
+                          decorationThickness: 2.0,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                          color: Colors.black),
+                      softWrap: true,
+                      textAlign: TextAlign.start,
+                    ),
+                    Text(
+                      desc,
+                      style: TextStyle(fontSize: 15.0, color: Colors.black),
+                      softWrap: true,
+                      maxLines: 5,
+                    ),
+                    Row(
+                      children: [
+                        Spacer(flex:3),
+                        Spacer(flex:2),
+                        GithubButton(onPressed: () {
+                          html.window.open(linkGithub, "x");
+                        })
+                      ],
+                    )
+                  ]),
+            ),
+          ],
+        ),
+        );
+        }
+      },
+    )
+    
+    
   );
 }

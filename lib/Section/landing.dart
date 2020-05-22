@@ -21,6 +21,53 @@ class LandingPage extends StatelessWidget {
 
 class DesktopLanding extends StatelessWidget {
   @override
+  void _showAboutDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              elevation: 5.0,
+              backgroundColor: Colors.transparent,
+              child: Container(
+                width: 200.0,
+                height: 190.0,
+                child: Column(
+                  children: [
+                    Container(
+                        padding: EdgeInsets.all(6.0),
+                        width: double.infinity,
+                        color: Color.fromRGBO(36, 37, 42, 1.0),
+                        child: Text(
+                          "Bio Data",
+                          style: TextStyle(color: Colors.white, fontSize: 16.0),
+                        )),
+                    Container(
+                      color: Colors.white,
+                      padding: EdgeInsets.all(12.0),
+                      child: Column(children: [
+                        Text(
+                            "Full name: Suryo Slamet Mujahid Musyaffa\nBirthday: November 22, 2003\nLocation: Cianjur, Indonesia\nEmail: suryomujahid@gmail.com",
+                            style: TextStyle()),
+                        FlatButton(
+                          color: Colors.red,
+                          child: Text(
+                            "Close",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        )
+                      ]),
+                    ),
+                  ],
+                ),
+              ));
+        });
+  }
+
   Widget build(BuildContext context) {
     return Container(
       child: Row(
@@ -46,19 +93,35 @@ class DesktopLanding extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-            GithubButton(onPressed: (){
-              html.window.open("https://github.com/suryomujahid", "x");
-            }),
-            LinkedinButton(onPressed: (){
-              html.window.open("https://www.linkedin.com/in/suryo-mujahid-03b899191/", "x");
-            }),
-            InstagramButton(onPressed: (){
-              html.window.open("https://www.instagram.com/suryomujahid/", "x");
-            }),
-            TwitterButton(onPressed: (){
-              html.window.open("https://www.twitter.com/suryomujahid/", "x");
-            },),
-            ],)
+            RaisedButton(
+              onPressed: () {
+                _showAboutDialog(context);
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0)),
+                  color: Colors.green,
+                  child: Text("More About Me", style: TextStyle(color: Colors.white)),
+            ),
+                GithubButton(onPressed: () {
+                  html.window.open("https://github.com/suryomujahid", "x");
+                }),
+                LinkedinButton(onPressed: () {
+                  html.window.open(
+                      "https://www.linkedin.com/in/suryo-mujahid-03b899191/",
+                      "x");
+                }),
+                InstagramButton(onPressed: () {
+                  html.window
+                      .open("https://www.instagram.com/suryomujahid/", "x");
+                }),
+                TwitterButton(
+                  onPressed: () {
+                    html.window
+                        .open("https://www.twitter.com/suryomujahid/", "x");
+                  },
+                ),
+              ],
+            ),
           ]),
           SizedBox(
             width: 100.0,
@@ -87,19 +150,22 @@ class MobileLanding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 6.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Text("Hello,",
                 style:
                     TextStyle(fontSize: 34.0, color: Colors.indigoAccent[400])),
-            Text("I am Suryo Mujahid",
-                style: TextStyle(
-                    fontSize: 42.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.indigoAccent)),
+            Text(
+              "I am Suryo Mujahid",
+              style: TextStyle(
+                  fontSize: 42.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.indigoAccent),
+              textAlign: TextAlign.center,
+            ),
             Text(
               "I live in Indonesia, I have a lot of\ninterest on IT especially programming.\nCurrently studying at SMK Wikrama Bogor",
               style: TextStyle(
@@ -112,19 +178,26 @@ class MobileLanding extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-            GithubButton(onPressed: (){
-              html.window.open("https://github.com/suryomujahid", "x");
-            }),
-            LinkedinButton(onPressed: (){
-              html.window.open("https://www.linkedin.com/in/suryo-mujahid-03b899191/", "x");
-            }),
-            InstagramButton(onPressed: (){
-              html.window.open("https://www.instagram.com/suryomujahid/", "x");
-            }),
-            TwitterButton(onPressed: (){
-              html.window.open("https://www.twitter.com/suryomujahid/", "x");
-            },),
-            ],)
+                GithubButton(onPressed: () {
+                  html.window.open("https://github.com/suryomujahid", "x");
+                }),
+                LinkedinButton(onPressed: () {
+                  html.window.open(
+                      "https://www.linkedin.com/in/suryo-mujahid-03b899191/",
+                      "x");
+                }),
+                InstagramButton(onPressed: () {
+                  html.window
+                      .open("https://www.instagram.com/suryomujahid/", "x");
+                }),
+                TwitterButton(
+                  onPressed: () {
+                    html.window
+                        .open("https://www.twitter.com/suryomujahid/", "x");
+                  },
+                ),
+              ],
+            )
           ]),
           SizedBox(
             height: 30.0,

@@ -66,7 +66,7 @@ Card skillCard(String dataImg, textSk) {
     child: Column(
       children: [
         Container(
-            padding: EdgeInsets.all(4.0),
+            padding: EdgeInsets.all(16.0),
             child: Image(width: 140.0,height: 140.0 , image: AssetImage(dataImg))),
         Text(textSk, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),)
       ],
