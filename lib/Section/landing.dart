@@ -4,6 +4,7 @@ import 'dart:html' as html;
 
 class LandingPage extends StatelessWidget {
   @override
+  
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -148,6 +149,52 @@ class DesktopLanding extends StatelessWidget {
 
 class MobileLanding extends StatelessWidget {
   @override
+  void _showAboutDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              elevation: 5.0,
+              backgroundColor: Colors.transparent,
+              child: Container(
+                width: 200.0,
+                height: 190.0,
+                child: Column(
+                  children: [
+                    Container(
+                        padding: EdgeInsets.all(6.0),
+                        width: double.infinity,
+                        color: Color.fromRGBO(36, 37, 42, 1.0),
+                        child: Text(
+                          "Bio Data",
+                          style: TextStyle(color: Colors.white, fontSize: 16.0),
+                        )),
+                    Container(
+                      color: Colors.white,
+                      padding: EdgeInsets.all(12.0),
+                      child: Column(children: [
+                        Text(
+                            "Full name: Suryo Slamet Mujahid Musyaffa\nBirthday: November 22, 2003\nLocation: Cianjur, Indonesia\nEmail: suryomujahid@gmail.com",
+                            style: TextStyle()),
+                        FlatButton(
+                          color: Colors.red,
+                          child: Text(
+                            "Close",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        )
+                      ]),
+                    ),
+                  ],
+                ),
+              ));
+        });
+  }
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 6.0),
@@ -174,6 +221,15 @@ class MobileLanding extends StatelessWidget {
                 color: Colors.white,
               ),
               textAlign: TextAlign.center,
+            ),
+                      RaisedButton(
+              onPressed: () {
+                _showAboutDialog(context);
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0)),
+                  color: Colors.green,
+                  child: Text("More About Me", style: TextStyle(color: Colors.white)),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
