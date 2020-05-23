@@ -77,18 +77,18 @@ class DesktopLanding extends StatelessWidget {
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text("Hello,",
                 style:
-                    TextStyle(fontSize: 44.0, color: Colors.indigoAccent[400])),
+                    TextStyle(fontSize: 40.0, color: Colors.grey[300])),
             Text("I am Suryo Mujahid",
                 style: TextStyle(
                     fontSize: 56.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.indigoAccent)),
+                    color: Colors.white)),
             Text(
               "I live in Indonesia, I have a lot of\ninterest on IT especially programming.\nCurrently studying at SMK Wikrama Bogor",
               style: TextStyle(
                 letterSpacing: 1.5,
                 fontSize: 20.0,
-                color: Colors.white,
+                color: Colors.grey[350],
               ),
             ),
             Row(
@@ -100,7 +100,7 @@ class DesktopLanding extends StatelessWidget {
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12.0)),
-                  color: Colors.green,
+                  color: Colors.indigoAccent[400],
                   child: Text("More About Me", style: TextStyle(color: Colors.white)),
             ),
                 GithubButton(onPressed: () {
@@ -115,10 +115,10 @@ class DesktopLanding extends StatelessWidget {
                   html.window
                       .open("https://www.instagram.com/suryomujahid/", "x");
                 }),
-                TwitterButton(
+                FacebookButton(
                   onPressed: () {
                     html.window
-                        .open("https://www.twitter.com/suryomujahid/", "x");
+                        .open("https://www.facebook.com/ryo.sm", "x");
                   },
                 ),
               ],
@@ -127,12 +127,6 @@ class DesktopLanding extends StatelessWidget {
           SizedBox(
             width: 100.0,
           ),
-          // CircleAvatar
-          //   backgroundImage: AssetImage(
-          //     "assets/img/me.jpg",
-          //   ),
-          //   radius: 20.0,
-          // )
           ClipRRect(
             borderRadius: BorderRadius.circular(200.0),
             child: Image.asset(
@@ -204,13 +198,13 @@ class MobileLanding extends StatelessWidget {
           Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Text("Hello,",
                 style:
-                    TextStyle(fontSize: 34.0, color: Colors.indigoAccent[400])),
+                    TextStyle(fontSize: 30.0, color: Colors.grey[200])),
             Text(
               "I am Suryo Mujahid",
               style: TextStyle(
                   fontSize: 42.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.indigoAccent),
+                  color: Colors.white),
               textAlign: TextAlign.center,
             ),
             Text(
@@ -218,7 +212,7 @@ class MobileLanding extends StatelessWidget {
               style: TextStyle(
                 letterSpacing: 1.5,
                 fontSize: 15.0,
-                color: Colors.white,
+                color: Colors.grey[350],
               ),
               textAlign: TextAlign.center,
             ),
@@ -228,7 +222,7 @@ class MobileLanding extends StatelessWidget {
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12.0)),
-                  color: Colors.green,
+                  color: Colors.indigoAccent[400],
                   child: Text("More About Me", style: TextStyle(color: Colors.white)),
             ),
             Row(
@@ -246,10 +240,10 @@ class MobileLanding extends StatelessWidget {
                   html.window
                       .open("https://www.instagram.com/suryomujahid/", "x");
                 }),
-                TwitterButton(
+                FacebookButton(
                   onPressed: () {
                     html.window
-                        .open("https://www.twitter.com/suryomujahid/", "x");
+                        .open("https://www.facebook.com/ryo.sm", "x");
                   },
                 ),
               ],
@@ -262,7 +256,7 @@ class MobileLanding extends StatelessWidget {
             borderRadius: BorderRadius.circular(200.0),
             child: Image.asset(
               'assets/img/me.jpg',
-              width: 150.0,
+              width: 160.0,
               fit: BoxFit.fill,
             ),
           ),

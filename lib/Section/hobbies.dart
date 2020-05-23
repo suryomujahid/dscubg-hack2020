@@ -6,14 +6,13 @@ class HobbiesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.grey[200],
       child: Column(children: [
         SizedBox(height:30.0),
         Text("Hobbies",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0,
-                color: Colors.blueGrey[900])),
+                color: Colors.white)),
         SizedBox(height: 28.0),
         Wrap(
           alignment: WrapAlignment.center,
@@ -28,7 +27,7 @@ class HobbiesSection extends StatelessWidget {
             hobbies("Illustrating", "assets/img/iPainting.png")
           ],
         ),
-        SizedBox(height:30.0),
+        SizedBox(height:10.0),
       ]),
     );
   }
@@ -40,7 +39,7 @@ Column hobbies(String hobby, String imgHobby) {
         borderRadius: BorderRadius.circular(200.0),
         child: Container(
           padding: EdgeInsets.all(20.0),
-          color: Colors.indigoAccent[100],
+          color: Colors.indigoAccent,
           width: 100.0,
           child: Image(
             image: AssetImage(imgHobby),
@@ -49,7 +48,7 @@ Column hobbies(String hobby, String imgHobby) {
         )),
     Text(
       hobby,
-      style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0),
+      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0, color: Colors.white),
     ),
   ]);
 }

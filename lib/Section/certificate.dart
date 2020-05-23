@@ -10,7 +10,7 @@ class CertSection extends StatelessWidget {
           Text("Certificate", style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0,
-                color: Colors.blueGrey[900])),
+                color: Colors.white)),
         SizedBox(height: 28.0),
           Wrap(
             direction: Axis.horizontal,
@@ -27,15 +27,19 @@ class CertSection extends StatelessWidget {
   }
 }
 
-Card SertCard(String title, String imgLoc) {
-  return Card(
-    color: Colors.grey[200],
-      elevation: 5,
+Container SertCard(String title, String imgLoc) {
+  return Container(
+    color: Colors.indigoAccent,
+    margin: EdgeInsets.all(8.0),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Image(
-          image: AssetImage(imgLoc),
-          width: 375.0,
+        Container(
+          color: Color.fromRGBO(33, 33, 33, 1.0),
+          padding: EdgeInsets.all(12.0),
+                  child: Image(
+            image: AssetImage(imgLoc),
+            width: 370.0,
+          ),
         ),
-        Text(title, style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0, color: Colors.blueGrey[800],)),
+        Text(title, style: TextStyle(fontSize: 16.0, color: Colors.white,)),
       ]));
 }

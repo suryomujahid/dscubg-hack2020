@@ -18,14 +18,14 @@ class Footer extends StatelessWidget {
             },
             child: Text('suryomujahid@gmail.com',
                 style: TextStyle(
-                    color: Colors.greenAccent)),
+                    color: Colors.indigoAccent)),
             shape: RoundedRectangleBorder(
                 side: BorderSide(
-                    color: Colors.green, width: 2.0, style: BorderStyle.solid),
+                    color: Colors.indigoAccent, width: 2.0, style: BorderStyle.solid),
                 borderRadius: BorderRadius.circular(20)),
           ),
           SizedBox(height: 40.0),
-          Text("Made with ❤️️ by SuryoMujahid", style: TextStyle(color: Colors.grey, fontSize: 14.0),)
+          Text("Made with ❤️️ by SuryoMujahid", style: TextStyle(color: Colors.grey[300], fontSize: 14.0),)
         ],
       ),
     );
